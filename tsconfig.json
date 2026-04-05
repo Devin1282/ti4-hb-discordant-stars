@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "lib": ["ES2023", "DOM"],
+    "module": "node16",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "useUnknownInCatchVariables": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "outDir": "./build",
+    "moduleResolution": "node16",
+    "target": "ES6",
+    "sourceMap": true
+  },
+  "include": ["./src/**/*.ts"]
+}
