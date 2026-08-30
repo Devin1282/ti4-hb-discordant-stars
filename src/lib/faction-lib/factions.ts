@@ -451,7 +451,7 @@ export const factions: Array<FactionSchemaType> = [
         pds: 1,
       },
       factionTechs: ["orbital-defense-grid"],
-      unitOverrides: ["nexus", "guass-cannon-1", "gauss-cannon-2","eye-of-the-curator"],
+      unitOverrides: ["the-nexus", "gauss-cannon-1", "gauss-cannon-2"],
     },
     {
       nsidName: "glimmer-of-mortheus",
