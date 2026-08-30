@@ -1,7 +1,7 @@
 import { refPackageId } from "@tabletop-playground/api";
 import { HomebrewModuleType } from "ti4-ttpg-ts";
 
-import { factions } from "./factions";
+import { factions } from "./lib/faction-lib/factions";
 
 const packageId: string = refPackageId;
 
