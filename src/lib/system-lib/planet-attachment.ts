@@ -40,5 +40,10 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       nsidName: "gledge-base-token",
       resources: 2,
     },
+    {
+      name: "Automatons",
+      nsidName: "automatons-token",
+      doNotAttach: true,
+    },
     ]
 };
