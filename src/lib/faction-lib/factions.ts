@@ -846,6 +846,7 @@ export const factions: Array<FactionSchemaType> = [
         { nsid: "token.other:discordant-stars/industrial-fragment-token" },
         { nsid: "token.other:discordant-stars/hazardous-fragment-token" },
         { nsid: "token.other:discordant-stars/frontier-fragment-token" },
+        { nsid: "token.other:discordant-stars/encryption-key-token" },
       ],
     },
     {

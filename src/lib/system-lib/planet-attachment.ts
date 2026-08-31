@@ -65,5 +65,10 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       nsidName: "branch-office-tax-haven",
       influence: 1,
     },
+    {
+      name: "Encryption Key",
+      nsidName: "encryption-key-token",
+      techs: ["blue","green","red","yellow"],
+    },
     ]
 };
