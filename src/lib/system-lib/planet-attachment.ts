@@ -75,5 +75,10 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       nsidName: "edyn-sigil-token",
       doNotAttach: true,
     },
+    {
+      name: "Kjalengard Glory Token",
+      nsidName: "glory-token",
+      doNotAttach: true,
+    },
     ]
 };
