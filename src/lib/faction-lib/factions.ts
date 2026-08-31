@@ -225,7 +225,7 @@ export const factions: Array<FactionSchemaType> = [
       leaders: {
         agents: ["skarvald-torvar"],
         commanders: ["jarl-vel-jarl-jotrun"],
-        heroes: ["raze-order"],
+        heroes: ["raze-order","destiny-drive"],
         mechs: ["jotun"],
       },
       promissories: ["raid-leaders"],
