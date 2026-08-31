@@ -45,5 +45,25 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       nsidName: "automatons-token",
       doNotAttach: true,
     },
+    {
+      name: "Branch Office Broadcast Hub",
+      nsidName: "branch-office-broadcast-hub",
+      influence: 1,
+    },
+    {
+      name: "Branch Office Orbital Shipyard",
+      nsidName: "branch-office-orbital-shipyard",
+      resources: 1,
+    },
+    {
+      name: "Branch Office Reserve Bank",
+      nsidName: "branch-office-reserve-bank",
+      resources: 1,
+    },
+    {
+      name: "Branch Office Tax Haven",
+      nsidName: "branch-office-tax-haven",
+      influence: 1,
+    },
     ]
 };
