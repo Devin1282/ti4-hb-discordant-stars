@@ -232,6 +232,8 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       nsidName: "celagrom",
       spaceCombat: { hit: 5 },
       bombardment: { hit: 5 },
+      onlyIfFaceDown: true,
+      overrideNsid: "card.breakthrough:discordant-stars/trade-protectorate",
     },
 
     // Mech
@@ -305,6 +307,8 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       name: "Omni-Forgeworld",
       unit: "war-sun",
       nsidName: "the-prodigys-triumph",
+      onlyIfFaceDown: true,
+      overrideNsid: "card.breakthrough:discordant-stars/the-prodigys-triumph",
       spaceCombat: { dice: 3, hit: 3 },
       bombardment: { dice: 3, hit: 3 },
       cost: 10
@@ -389,6 +393,8 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       nsidName: "tribune",
       spaceCombat: { hit: 5 },
       bombardment: { hit: 5 },
+      overrideNsid: "card.breakthrough:discordant-stars/psychospore",
+      onlyIfFaceDown: true,
     },
 
     //PDS
@@ -438,7 +444,9 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       name: "Eye of the Creator",
       unit: "fighter",
       nsidName: "eye-of-the-creator",
+      overrideNsid: "card.breakthrough:discordant-stars/stabilization-arrays",
       spaceCombat: { hit: 8 },
+      onlyIfFaceDown: true,
     },
     {
       name: "Heavy Bomber I",
