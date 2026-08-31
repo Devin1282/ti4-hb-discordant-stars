@@ -10,7 +10,8 @@
     "purge": "ttpg-scripts purge",
     "libpack": "ttpg-scripts libpack",
     "watch": "ttpg-scripts watch",
-    "postpublish": "ttpg-scripts postpublish"
+    "postpublish": "ttpg-scripts postpublish",
+    "hb-helper": "yarn dev && jest --config jest.config-build.json && yarn dev"
   },
   "keywords": [],
   "author": "",
