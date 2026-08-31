@@ -1,0 +1,44 @@
+import { PlanetAttachmentSchemaType } from "ti4-ttpg-ts";
+
+export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
+  string,
+  Array<PlanetAttachmentSchemaType>
+> = {
+    ["discordant-stars"]: [
+    {
+      name: "Trap: Account Siphon",
+      nsidName: "trap-account-siphon-token",
+      doNotAttach: true,
+    },
+    {
+      name: "Trap: Feint",
+      nsidName: "trap-feint-token",
+      doNotAttach: true,
+    },
+    {
+      name: "Trap: Gravitic Inhibitors",
+      nsidName: "trap-gravitic-inhibitors-token",
+      doNotAttach: true,
+    },
+    {
+      name: "Trap: Interference Grid",
+      nsidName: "trap-interference-grid-token",
+      doNotAttach: true,
+    },
+    {
+      name: "Trap: Minefield",
+      nsidName: "trap-minefield-token",
+      doNotAttach: true,
+    },
+    {
+      name: "Trap: Saboteurs",
+      nsidName: "trap-saboteurs-token",
+      doNotAttach: true,
+    },
+    {
+      name: "GLEdge Base",
+      nsidName: "gledge-base-token",
+      resources: 2,
+    },
+    ]
+};

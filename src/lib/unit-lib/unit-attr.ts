@@ -226,6 +226,34 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       bombardment: { hit: 5 },
       antiFighterBarrage: { hit: 5 },
     },
+    {
+      name: "Celagrom", 
+      unit: "flagship",
+      nsidName: "celagrom",
+      spaceCombat: { hit: 5 },
+      bombardment: { hit: 5 },
+    },
+
+    // Mech
+    {
+      name: "Voidflare Warden II",
+      unit: "mech",
+      nsidName: "voidflare-warden-2",
+      bombardment: { hit: 4 },
+    },
+    {
+      name: "Justicar",
+      unit: "mech",
+      nsidName: "dusticar",
+      bombardment: { hit: 5 },
+    },
+    {
+      name: "Rook",
+      unit: "mech",
+      nsidName: "rook",
+      bombardment: { hit: 5 },
+      spaceCannon: { dice: 2, hit: 8},
+    },
 
     //Destroyer
     
@@ -272,6 +300,14 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       spaceCombat: { dice: 3, hit: 3 },
       bombardment: { dice: 3, hit: 3 },
       cost: 12
+    },
+    {
+      name: "Omni-Forgeworld",
+      unit: "war-sun",
+      nsidName: "the-prodigys-triumph",
+      spaceCombat: { dice: 3, hit: 3 },
+      bombardment: { dice: 3, hit: 3 },
+      cost: 10
     },
 
     //Cruiser
@@ -344,6 +380,13 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       name: "Chitin Hulk II",
       unit: "dreadnought",
       nsidName: "chitin-hulk-2",
+      spaceCombat: { hit: 5 },
+      bombardment: { hit: 5 },
+    },
+    {
+      name: "Tribune",
+      unit: "dreadnought",
+      nsidName: "tribune",
       spaceCombat: { hit: 5 },
       bombardment: { hit: 5 },
     },
