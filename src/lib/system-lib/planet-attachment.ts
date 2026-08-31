@@ -70,5 +70,10 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       nsidName: "encryption-key-token",
       techs: ["blue","green","red","yellow"],
     },
+    {
+      name: "Edyn Sigil",
+      nsidName: "edyn-sigil-token",
+      doNotAttach: true,
+    },
     ]
 };

@@ -914,7 +914,7 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["unity-algorithm","encrypted-trade-hub"],
       unitOverrides: ["kaliburn"],
       extras: [
-        { nsid: "token.other:discordant-stars/edyn-sigil-token" },
+        { nsid: "token.other:discordant-stars/edyn-sigil-token", count: 4 },
       ],
     },
     {
