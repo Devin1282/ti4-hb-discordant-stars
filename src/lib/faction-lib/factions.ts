@@ -1058,7 +1058,7 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["halberd"],
     },
     {
-      nsidName: "Kyro Sodality",
+      nsidName: "kyro-sodality",
       name: "Kyro Sodality",
       abbr: "Kyro",
       abilities: ["contagion","plague-reservoir","subversive"],

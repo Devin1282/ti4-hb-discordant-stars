@@ -25,6 +25,7 @@ export const SOURCE_TO_TECH_DATA: Record<string, Array<TechSchemaType>> = {
         prerequisites: { blue: 2, yellow: 1 },
         isFactionTech: true,
         replacesNsidName: "dreadnought-2",
+        
     },
     {
         name: "Combat Transport II",

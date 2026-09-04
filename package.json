@@ -20,5 +20,9 @@
     "ti4-hb-helper": "^1.1.25",
     "ttpg-scripts": "^1.5.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "ti4-ttpg-ts": "^1.0.22",
+    "ttpg-darrell": "^1.1.78"
   }
 }
