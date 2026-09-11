@@ -18,7 +18,7 @@ export const ThussadKrath: UnitModifierSchemaType = {
     { cardClass: "alliance", nsidName: "thussad-krath" },
   ],
   applies: (combatRoll: CombatRoll): boolean => {
-    const commanderNsid: string = "card.leader.commander:discordant-supports/thussad-krath";
+    const commanderNsid: string = "card.leader.commander:discordant-stars/thussad-krath";
     const rollType: CombatRollType = combatRoll.getRollType();
     return (rollType === "spaceCombat" || rollType === "groundCombat") &&
     combatRoll.isCommanderUnlocked(commanderNsid);

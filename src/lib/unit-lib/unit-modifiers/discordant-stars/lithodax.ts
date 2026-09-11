@@ -1,13 +1,8 @@
 import {
   CombatRoll,
-  SystemAdjacency,
-  Faction,
   UnitAttrs,
-  UnitPlastic,
 } from "ti4-ttpg-ts";
 import { UnitModifierSchemaType } from "ti4-ttpg-ts";
-import { HexType } from "ttpg-darrell";
-import { Vector } from "@tabletop-playground/api";
 
 export const Lithodax: UnitModifierSchemaType = {
   name: "Lithodax",

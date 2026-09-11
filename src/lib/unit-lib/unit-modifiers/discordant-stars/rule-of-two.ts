@@ -2,7 +2,6 @@ import {
   CombatRoll,
   CombatRollType,
   UnitAttrs,
-  CombatAttrs,
 } from "ti4-ttpg-ts";
 import { UnitModifierSchemaType } from "ti4-ttpg-ts";
 

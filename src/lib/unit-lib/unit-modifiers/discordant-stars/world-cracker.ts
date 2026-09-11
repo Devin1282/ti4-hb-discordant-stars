@@ -1,11 +1,8 @@
 import {
   CombatRoll,
-  SystemAdjacency,
-  Faction,
   UnitAttrs,
 } from "ti4-ttpg-ts";
 import { UnitModifierSchemaType } from "ti4-ttpg-ts";
-import { HexType } from "ttpg-darrell";
 import { Vector } from "@tabletop-playground/api";
 
 export const WorldCracker: UnitModifierSchemaType = {
@@ -19,14 +16,7 @@ export const WorldCracker: UnitModifierSchemaType = {
   },
   apply: (combatRoll: CombatRoll): void => {
     let adjAsteroidFields: number = 0;
-
-    const hex: HexType = combatRoll.getHex();
-    const faction: Faction | undefined = combatRoll.self.faction;
-    const adjHexes: Set<HexType> = new SystemAdjacency().getAdjHexes(
-      hex,
-      faction
-    );
-    for (const adjHex of adjHexes) {
+    for (const adjHex of combatRoll.getAdjHexes()) {
       const pos: Vector = TI4.hex.toPosition(adjHex);
       const system = TI4.systemRegistry.getByPosition(pos);
       if (system && system.getAnomalies().includes("asteroid-field")) {

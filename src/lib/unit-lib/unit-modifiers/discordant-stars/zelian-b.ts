@@ -16,7 +16,7 @@ export const ZelianB: UnitModifierSchemaType = {
     { cardClass: "alliance", nsidName: "zelian-b" },
   ],
   applies: (combatRoll: CombatRoll): boolean => {
-    const commanderNsid: string = "card.leader.commander:discordant-supports/zelian-b";
+    const commanderNsid: string = "card.leader.commander:discordant-stars/zelian-b";
     const rollType: CombatRollType = combatRoll.getRollType();
     return (rollType === "antiFighterBarrage") &&
     combatRoll.isCommanderUnlocked(commanderNsid);

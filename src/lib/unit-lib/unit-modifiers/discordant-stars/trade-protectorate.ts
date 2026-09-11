@@ -1,6 +1,3 @@
-// TODO should this be called celagrom.ts with it checking for the celagrom unit token?
-// "nsid": "token.other:discordant-stars/celagrom-token"
-// "nsid": "card.other:discordant-stars/celagrom-card",
 import { UnitAttrs, CombatAttrs, UnitPlastic } from "ti4-ttpg-ts";
 import {
   CombatRoll,
