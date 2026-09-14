@@ -1,5 +1,3 @@
-// TODO fix dice count because base spaceCombat dice is 1
-
 import { CombatRoll, UnitAttrs } from "ti4-ttpg-ts";
 import { OPPONENT, SELF, placeGameObjects } from "./abstract.test";
 import { Nemsys, _countSecrets } from "./nemsys";
