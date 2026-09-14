@@ -1,7 +1,6 @@
 import { CombatRoll, CombatRollParams } from "ti4-ttpg-ts";
 import { placeGameObjects, SELF, OPPONENT } from "./abstract.test";
 import { unitAttrs } from "../../../unit-attrs";
-
 import { _countUnitUpgradeTech, Reckoning } from "./reckoning";
 
 beforeEach(() => {

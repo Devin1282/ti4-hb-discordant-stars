@@ -2,7 +2,6 @@ import { CombatAttrs, CombatRoll, UnitAttrs, UnitPlastic } from "ti4-ttpg-ts";
 import { placeGameObjects, SELF, OPPONENT } from "./abstract.test";
 import { ThussadKrath } from "./thussad-krath";
 import { Rotator } from "@tabletop-playground/api";
-import { Facing } from "ttpg-darrell";
 
 beforeEach(() => {
   TI4.unitModifierRegistry.load("discordant-stars", [ThussadKrath]);
