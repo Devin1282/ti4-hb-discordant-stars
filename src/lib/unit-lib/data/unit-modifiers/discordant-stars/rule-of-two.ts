@@ -8,12 +8,12 @@ import { UnitModifierSchemaType } from "ti4-ttpg-ts";
 export const RuleOfTwo: UnitModifierSchemaType = {
   name: "Rule of Two",
   description: "During a round of combat in a system that contains exactly 2 of your non-fighter ships, if those ships have the same unit type, apply +2 to the result of each of those unit's combat rolls.",
-  triggers: [{ cardClass: "faction-ability", nsidName: "projection-of-power" }],
+  triggers: [{ cardClass: "faction-ability", nsidName: "rule-of-two" }],
   owner: "self",
   priority: "adjust",
   applies: (combatRoll: CombatRoll): boolean => {
     const rollType: CombatRollType = combatRoll.getRollType();
-    return rollType === "spaceCombat" || rollType === "groundCombat";
+    return rollType === "spaceCombat";
   },
   apply: (combatRoll: CombatRoll): void => {
     const unitAttrsList = combatRoll.self.unitAttrsSet.getAll();
@@ -24,12 +24,12 @@ export const RuleOfTwo: UnitModifierSchemaType = {
 
     for (const attrs of unitAttrsList) {
       const attrsAny = attrs as any;
-      const type = attrsAny.type as string; 
+      const type = attrs.getUnit() as string; 
       
       // Skip fighters or units where the type cannot be determined
       if (!type || type === "fighter") continue;
 
-      const count = attrsAny.count || 0;
+      const count = combatRoll.self.getCount(type);
       
       if (count > 0) {
         totalNonFighters += count;
@@ -48,11 +48,6 @@ export const RuleOfTwo: UnitModifierSchemaType = {
       const spaceCombat = targetAttrs.getSpaceCombat();
       if (spaceCombat) {
         spaceCombat.addHit(2);
-      }
-
-      const groundCombat = targetAttrs.getGroundCombat();
-      if (groundCombat) {
-        groundCombat.addHit(2);
       }
     }
   },

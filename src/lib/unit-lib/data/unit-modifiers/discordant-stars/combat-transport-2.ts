@@ -4,8 +4,8 @@ import {
 } from "ti4-ttpg-ts";
 import { UnitModifierSchemaType } from "ti4-ttpg-ts";
 
-export const RaidLeaders: UnitModifierSchemaType = {
-  name: "Raid Leaders",
+export const CombatTransport2: UnitModifierSchemaType = {
+  name: "Combat Transport II",
   description: "Reroll 1 die in ground combat with 2 or fewer infantry",
   triggers: [
     {

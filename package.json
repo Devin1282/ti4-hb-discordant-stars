@@ -17,12 +17,21 @@
   "author": "",
   "devDependencies": {
     "@tabletop-playground/api": "^0.41.0",
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.70.0",
+    "@typescript-eslint/parser": "^8.70.0",
+    "eslint": "^10.10.0",
+    "jest": "^30.5.1",
     "ti4-hb-helper": "^1.1.25",
+    "ts-jest": "^29.4.12",
     "ttpg-scripts": "^1.5.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "ti4-ttpg-ts": "^1.0.22",
     "ttpg-darrell": "^1.1.78"
+  },
+  "resolutions": {
+    "ti4-ttpg-ts": "^1.0.22"
   }
 }

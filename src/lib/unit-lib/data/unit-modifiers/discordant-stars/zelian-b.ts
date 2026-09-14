@@ -31,17 +31,17 @@ export const ZelianB: UnitModifierSchemaType = {
         unitAttrs.isShip() &&
         !unitAttrs.getAntiFighterBarrage()
       ) {
-        continue;
+        // Found a Dreadnought or War Sun ship without AFB.
+        combatRoll.self.addSyntheticUnit(
+          {
+            name: `Zelian B (${unit})`,
+            unit: `zelian-b-${unit}` as UnitType,
+            antiFighterBarrage: { hit: 5 },
+          },
+          1
+        );
       }
-      // Found a Dreadnought or War Sun ship without AFB.
-      combatRoll.self.addSyntheticUnit(
-        {
-          name: `Zelian B (${unit})`,
-          unit: "Zelian B" as UnitType,
-          antiFighterBarrage: { hit: 5 },
-        },
-        1
-      );
+      
     }
   },
 };

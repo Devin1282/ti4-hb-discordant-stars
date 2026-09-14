@@ -36,13 +36,13 @@ export const CovertStrikeTeams: UnitModifierSchemaType = {
       combatRoll.self.unitAttrsSet.get("mech");
     if (mechRolls > 0 && mechUnitAttrs) {
       const mechCombatAttrs: CombatAttrs | undefined =
-        mechUnitAttrs.getSpaceCombat();
+        mechUnitAttrs.getGroundCombat();
       if (mechCombatAttrs) {
         combatRoll.self.addSyntheticUnit(
           {
             name: "Covert Stike Mech (mech)",
             unit: "covert-strike-mech" as UnitType,
-            spaceCombat: {
+            groundCombat: {
               dice: 1,
               hit: mechCombatAttrs.getHit(),
             },
@@ -56,13 +56,13 @@ export const CovertStrikeTeams: UnitModifierSchemaType = {
       combatRoll.self.unitAttrsSet.get("infantry");
     if (infantryRolls > 0 && infantryUnitAttrs) {
       const infantryCombatAttrs: CombatAttrs | undefined =
-        infantryUnitAttrs.getSpaceCombat();
+        infantryUnitAttrs.getGroundCombat();
       if (infantryCombatAttrs) {
         combatRoll.self.addSyntheticUnit(
           {
             name: "Covert Strike (infantry)",
             unit: "covert-strike-infantry" as UnitType,
-            spaceCombat: {
+            groundCombat: {
               dice: 1,
               hit: infantryCombatAttrs.getHit(),
             },

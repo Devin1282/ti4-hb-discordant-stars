@@ -12,7 +12,7 @@ export const RaidLeaders: UnitModifierSchemaType = {
   triggers: [
     {
       cardClass: "promissory",
-      nsidName: "industry-secrets",
+      nsidName: "raid-leaders",
     },
   ],
   owner: "self",

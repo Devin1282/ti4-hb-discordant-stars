@@ -6,14 +6,22 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "useUnknownInCatchVariables": false,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "jsx": "react",
+    "types":["jest"],
+    "jsxFactory": "jsxInTTPG",
+    "jsxFragmentFactory": "jsxFrag",
     "rootDir": "./src",
-    "baseUrl": "./src",
     "outDir": "./build",
     "moduleResolution": "node16",
+    "isolatedModules": true,
     "target": "ES6",
-    "sourceMap": true
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "./build"
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.d.ts"]
 }

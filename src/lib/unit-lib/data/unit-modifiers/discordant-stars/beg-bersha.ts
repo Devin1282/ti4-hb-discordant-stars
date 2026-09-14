@@ -97,10 +97,10 @@ export const BegBersha: UnitModifierSchemaType = {
 
     const flagshipAttrs: UnitAttrs =
       combatRoll.self.unitAttrsSet.getOrThrow("flagship");
-    flagshipAttrs.getBombardment()?.addDice(totalMechCount);
-    flagshipAttrs.getAntiFighterBarrage()?.addDice(totalMechCount);
-    flagshipAttrs.getSpaceCannon()?.addDice(totalMechCount);
-    flagshipAttrs.getSpaceCombat()?.addDice(totalMechCount);
-    flagshipAttrs.getGroundCombat()?.addDice(totalMechCount);
+    flagshipAttrs.getBombardment()?.addExtraDice(totalMechCount);
+    flagshipAttrs.getAntiFighterBarrage()?.addExtraDice(totalMechCount);
+    flagshipAttrs.getSpaceCannon()?.addExtraDice(totalMechCount);
+    flagshipAttrs.getSpaceCombat()?.addExtraDice(totalMechCount);
+    flagshipAttrs.getGroundCombat()?.addExtraDice(totalMechCount);
   },
 };

@@ -1,16 +1,12 @@
 import { UnitAttrsSchemaType } from "ti4-ttpg-ts";
 
-export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
-  string,
-  Array<UnitAttrsSchemaType>
-> = {
-  "discordant-stars": [
+export const unitAttrs: Array<UnitAttrsSchemaType> = [
     // Flagship
     {
       name: "Nemsys", 
       unit: "flagship",
       nsidName: "nemsys",
-      spaceCombat: { hit: 5 },
+      spaceCombat: { dice: 1, hit: 5 },
     },
     {
       name: "Wayfinder", 
@@ -83,9 +79,9 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       cost: 6,
     },
     {
-      name: "Beg Bertha", 
+      name: "Beg Bersha", 
       unit: "flagship",
-      nsidName: "beg-bertha",
+      nsidName: "beg-bersha",
       spaceCombat: { dice: 2, hit: 7 },
       bombardment: { hit: 7 },
     },
@@ -517,5 +513,4 @@ export const SOURCE_TO_UNIT_ATTRS_DATA: Record<
       nsidName: "trade-port-2",
       antiFighterBarrage: { dice: 2, hit: 6},
     },
-  ]
-};
+  ];

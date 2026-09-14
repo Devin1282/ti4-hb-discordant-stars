@@ -38,7 +38,7 @@ export function _countUnitUpgradeTech(playerSlot: number): number {
 }
 
 export const Templar: UnitModifierSchemaType = {
-  name: "Temaplr",
+  name: "Templar",
   description: "+1 to the result of this unit's combat rolls per enemy unit upgrade techs",
   triggers: [{ cardClass: "mech", nsidName: "templar" }],
   owner: "self",

@@ -497,7 +497,8 @@ export const factions: Array<FactionSchemaType> = [
         },
       ],
       commodities: 1,
-      home: 2021,
+      home: 2022,
+      homeSurrogate: 2021,
       leaders: {
         agents: ["lactarius-indigo"],
         commanders: ["amanita-muscaria"],
@@ -790,6 +791,7 @@ export const factions: Array<FactionSchemaType> = [
       ],
       commodities: 2,
       home: 2035,
+      homeSurrogate: 2034,
       leaders: {
         agents: ["zelian-a"],
         commanders: ["zelian-b"],
