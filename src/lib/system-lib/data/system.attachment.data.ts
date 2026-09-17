@@ -15,5 +15,11 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       nsidName: "glory-token",
       doNotAttach: true,
     },
+    {
+      name: "Wound Token",
+      nsidName: "wound-token",
+      doNotAttach: true,
+      anomalies: ["gravity-rift", "nebula"],
+    },
   ]
 };
