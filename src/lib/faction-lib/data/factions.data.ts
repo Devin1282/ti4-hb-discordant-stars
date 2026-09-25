@@ -900,7 +900,7 @@ export const factions: Array<FactionSchemaType> = [
       abilities: ["grace","decree","radiance"],
       breakthroughs: [
         {
-          breakthrough: "arms-brokerage",
+          breakthrough: "celestial-ambassadors",
           techEquivalence: ["green", "blue"],
         },
       ],
