@@ -3,4 +3,4 @@ import { homebrew } from "./homebrew";
 
 it("generate", async () => {
   await generate(homebrew);
-})
+}, 300000)

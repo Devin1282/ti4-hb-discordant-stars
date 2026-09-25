@@ -1,10 +1,6 @@
 import { PlanetAttachmentSchemaType } from "ti4-ttpg-ts";
 
-export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
-  string,
-  Array<PlanetAttachmentSchemaType>
-> = {
-    ["discordant-stars"]: [
+export const planetAttachments: Array<PlanetAttachmentSchemaType> = [
     {
       name: "Trap: Account Siphon",
       nsidName: "trap-account-siphon-token",
@@ -47,22 +43,22 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
     },
     {
       name: "Branch Office Broadcast Hub",
-      nsidName: "branch-office-broadcast-hub",
+      nsidName: "branch-office-broadcast-hub-token",
       influence: 1,
     },
     {
       name: "Branch Office Orbital Shipyard",
-      nsidName: "branch-office-orbital-shipyard",
+      nsidName: "branch-office-orbital-shipyard-token",
       resources: 1,
     },
     {
       name: "Branch Office Reserve Bank",
-      nsidName: "branch-office-reserve-bank",
+      nsidName: "branch-office-reserve-bank-token",
       resources: 1,
     },
     {
       name: "Branch Office Tax Haven",
-      nsidName: "branch-office-tax-haven",
+      nsidName: "branch-office-tax-haven-token",
       influence: 1,
     },
     {
@@ -70,5 +66,4 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       nsidName: "encryption-key-token",
       techs: ["blue","green","red","yellow"],
     },
-    ]
-};
+];

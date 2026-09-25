@@ -22,9 +22,6 @@ unitModifiers.push(CovertStrikeTeams);
 import { GardenWorlds } from "./data/unit-modifiers/discordant-stars/garden-worlds";
 unitModifiers.push(GardenWorlds);
 
-import { HyperkineticOrdinance } from "./data/unit-modifiers/discordant-stars/hyperkinetic-ordinance";
-unitModifiers.push(HyperkineticOrdinance);
-
 import { IndustrySecrets } from "./data/unit-modifiers/discordant-stars/industry-secrets";
 unitModifiers.push(IndustrySecrets);
 
@@ -60,9 +57,6 @@ unitModifiers.push(Reckoning);
 
 import { RuleOfTwo } from "./data/unit-modifiers/discordant-stars/rule-of-two";
 unitModifiers.push(RuleOfTwo);
-
-import { ShardVolley } from "./data/unit-modifiers/discordant-stars/shard-volley";
-unitModifiers.push(ShardVolley);
 
 import { StarFallGunnery } from "./data/unit-modifiers/discordant-stars/starfall-gunnery";
 unitModifiers.push(StarFallGunnery);

@@ -1,10 +1,6 @@
 import { SystemAttachmentSchemaType } from "ti4-ttpg-ts";
 
-export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
-  string,
-  Array<SystemAttachmentSchemaType>
-> = {
-  ["discordant-stars"]: [
+export const systemAttachments: Array<SystemAttachmentSchemaType> = [
     {
       name: "Edyn Sigil",
       nsidName: "edyn-sigil-token",
@@ -21,5 +17,4 @@ export const SOURCE_TO_SYSTEM_ATTACHMENT_DATA: Record<
       doNotAttach: true,
       anomalies: ["gravity-rift", "nebula"],
     },
-  ]
-};
+];

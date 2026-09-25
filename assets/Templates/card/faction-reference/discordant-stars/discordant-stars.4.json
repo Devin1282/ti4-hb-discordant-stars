@@ -1,0 +1,70 @@
+{
+    "Type": "Card",
+    "GUID": "4347B3DBE4724C1DE19B688C6250420F",
+    "Name": "Faction Reference 5/5",
+    "Metadata": "",
+    "CollisionType": "Regular",
+    "Friction": 0.7,
+    "Restitution": 0,
+    "Density": 0.5,
+    "SurfaceType": "Cardboard",
+    "Roughness": 1,
+    "Metallic": 0,
+    "PrimaryColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+    },
+    "SecondaryColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+    },
+    "Flippable": true,
+    "AutoStraighten": false,
+    "ShouldSnap": true,
+    "ScriptName": "",
+    "Blueprint": "",
+    "Models": [],
+    "Collision": [],
+    "SnapPointsGlobal": false,
+    "SnapPoints": [],
+    "ZoomViewDirection": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+    },
+    "FrontTexture": "card/faction-reference/discordant-stars/discordant-stars.face.4.jpg",
+    "BackTexture": "card/faction-reference/discordant-stars/discordant-stars.back.jpg",
+    "HiddenTexture": "",
+    "BackIndex": -2,
+    "HiddenIndex": -1,
+    "NumHorizontal": 1,
+    "NumVertical": 2,
+    "Width": 8.8,
+    "Height": 6.3,
+    "Thickness": 0.05,
+    "HiddenInHand": true,
+    "UsedWithCardHolders": true,
+    "CanStack": true,
+    "UsePrimaryColorForSide": false,
+    "FrontTextureOverrideExposed": false,
+    "AllowFlippedInStack": false,
+    "MirrorBack": true,
+    "Model": "Rounded",
+    "Indices": [
+        0,
+        1
+    ],
+    "CardNames": {
+        "0": "Lanefir Remnants",
+        "1": "Nokar Sellships"
+    },
+    "CardMetadata": {
+        "0": "card.faction-reference:discordant-stars/lanefir-remnants",
+        "1": "card.faction-reference:discordant-stars/nokar-sellships"
+    },
+    "CardTags": {},
+    "GroundAccessibility": "ZoomAndContext",
+    "Tags": []
+}

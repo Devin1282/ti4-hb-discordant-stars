@@ -20,7 +20,7 @@ export const factions: Array<FactionSchemaType> = [
         heroes: ["galactic-field-test"],
         mechs: ["forgetender"],
       },
-      promissories: ["arms-brokerage"],
+      promissories: ["industry-secrets"],
       startingTechs: ["sarween-tools","ai-development-algorithm"],
       startingUnits: {
         dreadnought: 1,
@@ -90,7 +90,7 @@ export const factions: Array<FactionSchemaType> = [
       abilities: ["autonetic-memory","cybernetic-madness"],
       breakthroughs: [
         {
-          breakthrough: "cybernetic-armoring",
+          breakthrough: "synaptic-interference",
           techEquivalence: ["yellow", "red"],
         },
       ],
@@ -196,7 +196,7 @@ export const factions: Array<FactionSchemaType> = [
         heroes: ["heart-of-rebellion"],
         mechs: ["liberator"],
       },
-      promissories: ["broadcast-teamss"],
+      promissories: ["broadcast-teams"],
       startingTechs: ["psychoarchaeology"],
       startingUnits: {
         carrier: 1,
@@ -356,7 +356,7 @@ export const factions: Array<FactionSchemaType> = [
       home: 2018,
       leaders: {
         agents: ["vasra-ivo"],
-        commanders: ["dhume-tahu"],
+        commanders: ["dume-tathu"],
         heroes: ["stars-razor"],
         mechs: ["oro-zhin-elite"],
       },
@@ -440,7 +440,7 @@ export const factions: Array<FactionSchemaType> = [
         heroes: ["dhors-hammer"],
         mechs: ["javelin"],
       },
-      promissories: ["rapid-assembly"],
+      promissories: ["rapid-excavation"],
       startingTechs: ["ai-development-algorithm"],
       startingUnits: {
         carrier: 2,
@@ -460,7 +460,7 @@ export const factions: Array<FactionSchemaType> = [
       abilities: ["facsimile","illusory-presence"],
       breakthroughs: [
         {
-          breakthrough: "mirage-craf",
+          breakthrough: "mirage-craft",
           techEquivalence: ["yellow", "red"],
         },
       ],
@@ -531,10 +531,10 @@ export const factions: Array<FactionSchemaType> = [
       commodities: 3,
       home: 2023,
       leaders: {
-        agents: ["suldan-wraeg"],
+        agents: ["suldhan-wraeg"],
         commanders: ["thussad-krath"],
         heroes: ["singularity-cradle"],
-        mechs: ["voidflare-warden"],
+        mechs: ["voidflare-warden-1"],
       },
       promissories: ["nivyn-guidance"],
       startingTechs: ["dark-energy-tap","plasma-scoring"],
@@ -565,7 +565,7 @@ export const factions: Array<FactionSchemaType> = [
       home: 2025,
       leaders: {
         agents: ["baggil-wildpaw"],
-        commanders: ["knak-halfear"],
+        commanders: ["knak-half-ear"],
         heroes: ["shadow-council"],
         mechs: ["exemplar-bonum"],
       },
@@ -648,6 +648,9 @@ export const factions: Array<FactionSchemaType> = [
       },
       factionTechs: ["contractual-obligations"],
       unitOverrides: ["kyvir", "terrafactory-1", "terrafactory-2"],
+      extras: [
+        { nsid: "token.attachment.planet:discordant-stars/automatons-token" },
+      ],
     },
     {
       nsidName: "tnelis-syndicate",
@@ -777,6 +780,12 @@ export const factions: Array<FactionSchemaType> = [
       },
       factionTechs: ["seidr-project"],
       unitOverrides: ["richtyrian", "lancer-dreadnought-1", "lancer-dreadnought-2"],
+      extras: [
+        { nsid: "token.attachment.planet:discordant-stars/branch-office-broadcast-hub-token" },
+        { nsid: "token.attachment.planet:discordant-stars/branch-office-orbital-shipyard-token" },
+        { nsid: "token.attachment.planet:discordant-stars/branch-office-reserve-bank-token" },
+        { nsid: "token.attachment.planet:discordant-stars/branch-office-tax-haven-token" },
+      ],
     },
     {
       nsidName: "zelian-purifier",
@@ -795,7 +804,7 @@ export const factions: Array<FactionSchemaType> = [
       leaders: {
         agents: ["zelian-a"],
         commanders: ["zelian-b"],
-        heroes: ["catalysm"],
+        heroes: ["cataclysm"],
         mechs: ["collider"],
       },
       promissories: ["hyperkinetic-ordinance"],
@@ -916,7 +925,7 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["unity-algorithm","encrypted-trade-hub"],
       unitOverrides: ["kaliburn"],
       extras: [
-        { nsid: "token.other:discordant-stars/edyn-sigil-token", count: 4 },
+        { nsid: "token.attachment.system:discordant-stars/edyn-sigil-token", count: 4 },
       ],
     },
     {
@@ -986,7 +995,7 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["lightning-drives"],
       unitOverrides: ["beg-bersha", "orion-platform-1", "orion-platform-2"],
       extras: [
-        { nsid: "token.other:discordant-stars/gledge-base-token" },
+        { nsid: "token.attachment.planet:discordant-stars/gledge-base-token" },
         { nsid: "token.other:discordant-stars/core-token", count: 3 },
       ],
     },
@@ -1004,8 +1013,8 @@ export const factions: Array<FactionSchemaType> = [
       commodities: 3,
       home: 2002,
       leaders: {
-        agents: ["merkismathr"],
-        commanders: ["sdallari"],
+        agents: ["merkismathr-asvand"],
+        commanders: ["sdallari-tvungovot"],
         heroes: ["a-tale-of-legends"],
         mechs: ["skald"],
       },
@@ -1022,7 +1031,7 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["zhrgar-stimulants"],
       unitOverrides: ["hulgades-hammer", "star-dragon-1", "star-dragon-2"],
       extras: [
-        { nsid: "token.other:discordant-stars/glory-token", count: 3 },
+        { nsid: "token.attachment.system:discordant-stars/glory-token", count: 3 },
         { nsid: "card.other:discordant-stars/bannerhall-1" },
         { nsid: "card.other:discordant-stars/bannerhall-2" },
         { nsid: "card.other:discordant-stars/bannerhall-3" },

@@ -386,7 +386,7 @@ export const unitAttrs: Array<UnitAttrsSchemaType> = [
     {
       name: "Tribune",
       unit: "dreadnought",
-      nsidName: "tribune",
+      nsidName: "psychospore",
       spaceCombat: { hit: 5 },
       bombardment: { hit: 5 },
       overrideNsid: "card.breakthrough:discordant-stars/psychospore",

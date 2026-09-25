@@ -1,7 +1,6 @@
 import { SystemSchemaType } from "ti4-ttpg-ts";
 
-export const SOURCE_TO_SYSTEM_DATA: Record<string, Array<SystemSchemaType>> = {
-    ["discordant-stars"]: [
+export const systems: Array<SystemSchemaType> = [
         {
             tile: 2035,
             isHome: true,
@@ -56,7 +55,7 @@ export const SOURCE_TO_SYSTEM_DATA: Record<string, Array<SystemSchemaType>> = {
             planets: [
                 {
                 name: "Vaylar",
-                nsidName: "Vaylar",
+                nsidName: "vaylar",
                 resources: 3,
                 influence: 2,
                 },
@@ -177,7 +176,7 @@ export const SOURCE_TO_SYSTEM_DATA: Record<string, Array<SystemSchemaType>> = {
             planets: [
                 {
                 name: "Shi-Halaum",
-                nsidName: "shi-haluam",
+                nsidName: "shi-halaum",
                 resources: 4,
                 influence: 0,
                 },
@@ -278,8 +277,8 @@ export const SOURCE_TO_SYSTEM_DATA: Record<string, Array<SystemSchemaType>> = {
             isHome: true,
             planets: [
                 {
-                name: "Avicenna",
-                nsidName: "avicenna",
+                name: "Aviccena",
+                nsidName: "aviccena",
                 resources: 4,
                 influence: 0,
                 },
@@ -536,5 +535,4 @@ export const SOURCE_TO_SYSTEM_DATA: Record<string, Array<SystemSchemaType>> = {
                 },
             ],
         },
-    ]
-};
+    ];
