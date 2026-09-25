@@ -30,42 +30,24 @@ it("modifier (wrong roll type - ground combat)", () => {
   expect(combatRoll.getUnitModifierNames()).toEqual([]);
 });
 
-it("modifier (applies reroll misses to face-up dreadnought)", () => {
+it("modifier (splits face-up and face-down dreadnoughts into synthetic units)", () => {
   placeGameObjects({
     self: [PSYCHOSPORE_NSID],
-    selfUnits: new Map([["dreadnought", 1]]),
-  });
-  const combatRoll = CombatRoll.createCooked({
-    rollType: "spaceCombat",
-    hex: "<0,0,0>",
-    activatingPlayerSlot: OPPONENT,
-    rollingPlayerSlot: SELF,
+    selfUnits: new Map([["dreadnought", 2]]),
   });
 
-  expect(combatRoll.getUnitModifierNames()).toEqual(["Psychospore"]);
-
-  const dreadnoughtAttrs: UnitAttrs =
-    combatRoll.self.unitAttrsSet.getOrThrow("dreadnought");
-  const dreadSpace: CombatAttrs = dreadnoughtAttrs.getSpaceCombatOrThrow();
-  expect(dreadSpace.getRerollMisses()).toBe(true);
-});
-
-it("modifier (does not apply reroll misses to damaged dreadnought)", () => {
-  placeGameObjects({
-    self: [PSYCHOSPORE_NSID],
-    selfUnits: new Map([["dreadnought", 1]]),
-  });
-
-  // Damage the dreadnought by flipping it face-down (rolling 180 degrees)
+  // Damage 1 dreadnought by rotating 180 degrees
   const unitPlastics: Array<UnitPlastic> = UnitPlastic.getAll();
-  for (const plastic of unitPlastics) {
-    if (plastic.getOwningPlayerSlot() === SELF) {
-      if (plastic.getUnit() === "dreadnought") {
-        const rot: Rotator = plastic.getObj().getRotation();
-        rot.roll += 180;
-        plastic.getObj().setRotation(rot);
-      }
-    }
+  const dreadnoughts = unitPlastics.filter(
+    (plastic) =>
+      plastic.getOwningPlayerSlot() === SELF &&
+      plastic.getUnit() === "dreadnought"
+  );
+
+  if (dreadnoughts.length >= 2) {
+    const rot: Rotator = dreadnoughts[1].getObj().getRotation();
+    rot.roll += 180;
+    dreadnoughts[1].getObj().setRotation(rot);
   }
 
   const combatRoll = CombatRoll.createCooked({
@@ -77,8 +59,16 @@ it("modifier (does not apply reroll misses to damaged dreadnought)", () => {
 
   expect(combatRoll.getUnitModifierNames()).toEqual(["Psychospore"]);
 
-  const dreadnoughtAttrs: UnitAttrs =
+  // Standard dreadnought count should be overridden to just 1 (the damaged one) with no rerolls
+  expect(combatRoll.self.overrideUnitCountHex.get("dreadnought")).toBe(1);
+  const standardDread: UnitAttrs =
     combatRoll.self.unitAttrsSet.getOrThrow("dreadnought");
-  const dreadSpace: CombatAttrs = dreadnoughtAttrs.getSpaceCombatOrThrow();
-  expect(dreadSpace.getRerollMisses()).toBe(false);
+  const standardSpace: CombatAttrs = standardDread.getSpaceCombatOrThrow();
+  expect(standardSpace.getRerollMisses()).toBe(false);
+
+  // Synthetic Psychospore dreadnought should exist with count 1 and rerollMisses = true
+  const psychosporeDread: UnitAttrs =
+    combatRoll.self.unitAttrsSet.getOrThrow("dreadnought-psychospore" as any);
+  const psychosporeSpace: CombatAttrs = psychosporeDread.getSpaceCombatOrThrow();
+  expect(psychosporeSpace.getRerollMisses()).toBe(true);
 });
