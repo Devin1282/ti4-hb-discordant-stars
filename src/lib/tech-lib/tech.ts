@@ -152,6 +152,7 @@ export const technologies: Array<TechSchemaType> = [
         color: "unit-upgrade",
         prerequisites: { green: 1, yellow: 1, red: 1 },
         isFactionTech: true,
+        replacesNsidName: "mech"
     },
     {
       nsidName: "geosympathic-impeller",
