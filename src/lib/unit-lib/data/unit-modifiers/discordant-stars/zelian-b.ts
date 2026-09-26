@@ -10,7 +10,6 @@ export const ZelianB: UnitModifierSchemaType = {
   description: "Dreadnoughts and War Suns get ANTI-FIGHER BARRAGE 5",
   owner: "self",
   priority: "adjust",
-  triggerAlways: true,
   triggers: [
     { cardClass: "commander", nsidName: "zelian-b" },
     { cardClass: "alliance", nsidName: "zelian-b" },

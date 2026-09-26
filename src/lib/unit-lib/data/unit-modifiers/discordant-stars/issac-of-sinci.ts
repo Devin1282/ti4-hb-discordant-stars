@@ -10,7 +10,6 @@ export const IssacOfSinci: UnitModifierSchemaType = {
   description: "Apply +1 to each of your unit's ability rolls",
   owner: "self",
   priority: "adjust",
-  triggerAlways: true,
   triggers: [
     { cardClass: "commander", nsidName: "issac-of-sinci" },
     { cardClass: "alliance", nsidName: "issac-of-sinci" },

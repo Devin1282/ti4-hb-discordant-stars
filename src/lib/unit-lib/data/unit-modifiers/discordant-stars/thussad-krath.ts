@@ -12,7 +12,6 @@ export const ThussadKrath: UnitModifierSchemaType = {
   description: "+1 dice to up to 2 damaged units",
   owner: "self",
   priority: "adjust",
-  triggerAlways: true,
   triggers: [
     { cardClass: "commander", nsidName: "thussad-krath" },
     { cardClass: "alliance", nsidName: "thussad-krath" },
