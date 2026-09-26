@@ -16,9 +16,6 @@ unitModifiers.push(CombinatorialBypass);
 import { CombatTransport2 } from "./data/unit-modifiers/discordant-stars/combat-transport-2";
 unitModifiers.push(CombatTransport2);
 
-import { CovertStrikeTeams } from "./data/unit-modifiers/discordant-stars/covert-strike-teams";
-unitModifiers.push(CovertStrikeTeams);
-
 import { GardenWorlds } from "./data/unit-modifiers/discordant-stars/garden-worlds";
 unitModifiers.push(GardenWorlds);
 

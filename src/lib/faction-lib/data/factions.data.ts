@@ -503,6 +503,7 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["psyclobrea-qarnyx", "mycelium-ring-1", "mycelium-ring-2"],
       extras: [
         { nsid: "token.myko:discordant-stars/myko-commodity-token" },
+        { nsid: "dice:base/d10", count: 4 },
       ],
     },
     {
