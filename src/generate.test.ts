@@ -38,6 +38,13 @@ it("generate", async () => {
   await abstractGen.writeOutputFiles();
 
   abstractGen = new GenExtDeck(homebrew)
+    .setDeckType("celagrom")
+    .setIsLandscape(true)
+    .setIsSharedBack(false);
+  await abstractGen.generate(errors);
+  await abstractGen.writeOutputFiles();
+
+  abstractGen = new GenExtDeck(homebrew)
     .setDeckType("lord")
     .setIsLandscape(true)
     .setIsSharedBack(false);
@@ -78,7 +85,6 @@ it("generate", async () => {
   abstractGen = new GenExtPngToken(homebrew)
     .setToken("lord-token")
     .setTokenExtraPath("lord")
-    .setWidth(2);
   await abstractGen.generate(errors);
   await abstractGen.writeOutputFiles();
 

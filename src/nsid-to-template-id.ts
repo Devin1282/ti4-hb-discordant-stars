@@ -3,6 +3,7 @@ export const NSID_TO_TEMPLATE_ID: { [key: string]: string } = {
   "card.axis-order:discordant-stars/0": "1905C3A16249B4A0FD3B0EAB8A495462",
   "card.bannerhall:discordant-stars/0": "20EA7B308244E4B409CCDEC6917C4B2B",
   "card.breakthrough:discordant-stars/0": "714CACB912F74D6D2ABCFE5211962C73",
+  "card.celagrom:discordant-stars/0": "E0EE8143B1F540AF24BFB0A5847C7D80",
   "card.dhonraz:discordant-stars/0": "E914BD6B4ADE01AE86480290D6951288",
   "card.faction-reference:discordant-stars/0": "D9E3EE5B60B843C469196E78445DD9A3",
   "card.faction-reference:discordant-stars/1": "84AA70B70CC91C721EEC8F56FAA6E5B2",
