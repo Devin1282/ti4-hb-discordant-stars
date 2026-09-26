@@ -34,19 +34,19 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["bearer-of-heavens"],
       extras: [
         { 
-          nsid: "card.other:discordant-stars/axis-order-destroyer",
+          nsid: "card.axis-order:discordant-stars/axis-order-destroyer",
           count: 2,
         },
         { 
-          nsid: "card.other:discordant-stars/axis-order-carrier",
+          nsid: "card.axis-order:discordant-stars/axis-order-carrier",
           count: 2,
         },
         { 
-          nsid: "card.other:discordant-stars/axis-order-cruiser",
+          nsid: "card.axis-order:discordant-stars/axis-order-cruiser",
           count: 2,
         },
         { 
-          nsid: "card.other:discordant-stars/axis-order-dreadnought",
+          nsid: "card.axis-order:discordant-stars/axis-order-dreadnought",
           count: 2,
         },
       ],
@@ -80,8 +80,13 @@ export const factions: Array<FactionSchemaType> = [
         spaceDock: 1,
         pds: 1,
       },
-      factionTechs: ["emergency-mobilization-protocols"],
+      factionTechs: ["emergency-mobilization"],
       unitOverrides: ["supremacy", "trade-port-1", "trade-port-2"],
+      extras: [
+        { nsid: "card.celagrom:discordant-stars/celagrom-card" },
+        { nsid: "token.celagrom:discordant-stars/celagrom-token" },
+        { nsid: "token:discordant-stars/celdauri-space-dock" },
+      ],
     },
     {
       nsidName: "savages-of-cymiae",
@@ -208,6 +213,9 @@ export const factions: Array<FactionSchemaType> = [
       },
       factionTechs: ["envoy-network","covert-strike-teams"],
       unitOverrides: ["vox"],
+      extras: [
+        { nsid: "token.attachment.planet:discordant-stars/heart-of-rebellion-token" },
+      ],
     },
     {
       nsidName: "ghemina-raiders",
@@ -238,9 +246,10 @@ export const factions: Array<FactionSchemaType> = [
         spaceDock: 2,
       },
       factionTechs: ["war-song-implants"],
-      unitOverrides: ["the-lady","the-lord","combat-transport-1","combat-transport-2"],
+      unitOverrides: ["the-lady","combat-transport-1","combat-transport-2"],
       extras: [
-        { nsid: "card.other:discordant-stars/the-lord-card" },
+        { nsid: "card.lord:discordant-stars/the-lord-card" },
+        { nsid: "token.lord:discordant-stars/the-lord" },
       ],
     },
     {
@@ -305,9 +314,6 @@ export const factions: Array<FactionSchemaType> = [
       },
       factionTechs: ["seeker-drones","shrouded-skirmishers"],
       unitOverrides: ["nightingale-5"],
-      extras: [
-        { nsid: "card.other:discordant-stars/dont-shuffle" },
-      ],
     },
     {
       nsidName: "kortali-tribunal",
@@ -373,18 +379,18 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["wraith-engine"],
       unitOverrides: ["silence-of-stars", "heavy-bomber-1", "heavy-bomber-2"],
       extras: [
-        { nsid: "token.attachment.planet:discordant-stars/trap-account-siphon" },
-        { nsid: "token.attachment.planet:discordant-stars/trap-feint" },
-        { nsid: "token.attachment.planet:discordant-stars/trap-gravitic-inhibitors" },
-        { nsid: "token.attachment.planet:discordant-stars/trap-interference-grid" },
-        { nsid: "token.attachment.planet:discordant-stars/trap-minefield" },
-        { nsid: "token.attachment.planet:discordant-stars/trap-saboteurs" },
-        { nsid: "card.other:discordant-stars/trap-account-siphon" },
-        { nsid: "card.other:discordant-stars/trap-feint" },
-        { nsid: "card.other:discordant-stars/trap-gravitic-inhibitors" },
-        { nsid: "card.other:discordant-stars/trap-interference-grid" },
-        { nsid: "card.other:discordant-stars/trap-minefield" },
-        { nsid: "card.other:discordant-stars/trap-saboteurs" },
+        { nsid: "token.attachment.planet:discordant-stars/trap-account-siphon-token" },
+        { nsid: "token.attachment.planet:discordant-stars/trap-feint-token" },
+        { nsid: "token.attachment.planet:discordant-stars/trap-gravitic-inhibitors-token" },
+        { nsid: "token.attachment.planet:discordant-stars/trap-interference-grid-token" },
+        { nsid: "token.attachment.planet:discordant-stars/trap-minefield-token" },
+        { nsid: "token.attachment.planet:discordant-stars/trap-saboteurs-token" },
+        { nsid: "card.trap:discordant-stars/trap-account-siphon" },
+        { nsid: "card.trap:discordant-stars/trap-feint" },
+        { nsid: "card.trap:discordant-stars/trap-gravitic-inhibitors" },
+        { nsid: "card.trap:discordant-stars/trap-interference-grid" },
+        { nsid: "card.trap:discordant-stars/trap-minefield" },
+        { nsid: "card.trap:discordant-stars/trap-saboteurs" },
       ],
     },
     {
@@ -418,7 +424,7 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["stones-embrace"],
       unitOverrides: ["splintering-gale", "shattered-sky-1", "shattered-sky-2"],
       extras: [
-        { nsid: "card.other:discordant-stars/the-grove" },
+        { nsid: "card.grove:discordant-stars/the-grove" },
       ],
     },
     {
@@ -516,6 +522,9 @@ export const factions: Array<FactionSchemaType> = [
       },
       factionTechs: ["psychoactive-armaments"],
       unitOverrides: ["psyclobrea-qarnyx", "mycelium-ring-1", "mycelium-ring-2"],
+      extras: [
+        { nsid: "token.myko:discordant-stars/myko-commodity-token" },
+      ],
     },
     {
       nsidName: "nivyn-star-kings",
@@ -581,9 +590,10 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["false-flag-operations","geosympathic-impeller"],
       unitOverrides: ["rallypoint"],
       extras: [
-        { nsid: "card.other:discordant-stars/connect-the-people" },
-        { nsid: "card.other:discordant-stars/empower-the-economy" },
-        { nsid: "card.other:discordant-stars/preserve-the-environment" },
+        { nsid: "card.policy:discordant-stars/connect-the-people" },
+        { nsid: "card.policy:discordant-stars/empower-the-economy" },
+        { nsid: "card.policy:discordant-stars/preserve-the-environment" },
+        { nsid: "card.olradin:discordant-stars/olradin-commodities-card" },
       ],
     },
     {
@@ -650,6 +660,7 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["kyvir", "terrafactory-1", "terrafactory-2"],
       extras: [
         { nsid: "token.attachment.planet:discordant-stars/automatons-token" },
+        { nsid: "token.rohdhna:discordant-stars/rohdhna-commodity-token" },
       ],
     },
     {
@@ -681,7 +692,7 @@ export const factions: Array<FactionSchemaType> = [
         spaceDock: 1,
         pds: 1,
       },
-      factionTechs: ["daedalon-flights-system"],
+      factionTechs: ["daedalon-flight-system"],
       unitOverrides: ["principia", "blockade-runner-1", "blockade-runner-2"],
     },
     {
@@ -713,7 +724,7 @@ export const factions: Array<FactionSchemaType> = [
         infantry: 3,
         spaceDock: 1,
       },
-      factionTechs: ["midus-turbine","krovoz-strike-teams"],
+      factionTechs: ["midas-turbine","krovoz-strike-teams"],
       unitOverrides: ["aurum-vadra"],
     },
     {
@@ -853,11 +864,11 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["broker-network"],
       unitOverrides: ["wayfinder"],
       extras: [
-        { nsid: "token.other:discordant-stars/cultural-fragment-token" },
-        { nsid: "token.other:discordant-stars/industrial-fragment-token" },
-        { nsid: "token.other:discordant-stars/hazardous-fragment-token" },
-        { nsid: "token.other:discordant-stars/frontier-fragment-token" },
-        { nsid: "token.other:discordant-stars/encryption-key-token" },
+        { nsid: "token.bentor:discordant-stars/cultural-fragment-token" },
+        { nsid: "token.bentor:discordant-stars/industrial-fragment-token" },
+        { nsid: "token.bentor:discordant-stars/hazardous-fragment-token" },
+        { nsid: "token.bentor:discordant-stars/frontier-fragment-token" },
+        { nsid: "token.attachment.planet:discordant-stars/encryption-key-token" },
       ],
     },
     {
@@ -892,6 +903,10 @@ export const factions: Array<FactionSchemaType> = [
       },
       factionTechs: ["brood-pod"],
       unitOverrides: ["lithodax", "chitin-hulk-1", "chitin-hulk-2"],
+      extras: [
+        { nsid: "token:discordant-stars/cheiran-dreadnought-token" },
+        { nsid: "token:discordant-stars/cheiran-mech-token" },
+      ],
     },
     {
       nsidName: "edyn-mandate",
@@ -996,7 +1011,11 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["beg-bersha", "orion-platform-1", "orion-platform-2"],
       extras: [
         { nsid: "token.attachment.planet:discordant-stars/gledge-base-token" },
-        { nsid: "token.other:discordant-stars/core-token", count: 3 },
+        { nsid: "token.gledge.core:discordant-stars/core-token", count: 3 },
+        { nsid: "token.gledge.commodity:discordant-stars/gledge-commodity-token", count: 3 },
+        { nsid: "card.dhonraz:discordant-stars/dhonraz-1" },
+        { nsid: "card.dhonraz:discordant-stars/dhonraz-2" },
+        { nsid: "card.dhonraz:discordant-stars/dhonraz-3" },
       ],
     },
     {
@@ -1032,9 +1051,9 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["hulgades-hammer", "star-dragon-1", "star-dragon-2"],
       extras: [
         { nsid: "token.attachment.system:discordant-stars/glory-token", count: 3 },
-        { nsid: "card.other:discordant-stars/bannerhall-1" },
-        { nsid: "card.other:discordant-stars/bannerhall-2" },
-        { nsid: "card.other:discordant-stars/bannerhall-3" },
+        { nsid: "card.bannerhall:discordant-stars/bannerhall-1" },
+        { nsid: "card.bannerhall:discordant-stars/bannerhall-2" },
+        { nsid: "card.bannerhall:discordant-stars/bannerhall-3" },
       ],
     },
     {
@@ -1065,7 +1084,7 @@ export const factions: Array<FactionSchemaType> = [
         infantry: 4,
         spaceDock: 1,
       },
-      factionTechs: ["appled-biothermics","omniscience-field"],
+      factionTechs: ["applied-biothermics","omniscience-field"],
       unitOverrides: ["halberd"],
     },
     {

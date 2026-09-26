@@ -32,6 +32,11 @@ export const planetAttachments: Array<PlanetAttachmentSchemaType> = [
       doNotAttach: true,
     },
     {
+      name: "Heart of Rebellion",
+      nsidName: "heart-of-rebellion-token",
+      doNotAttach: true,
+    },
+    {
       name: "GLEdge Base",
       nsidName: "gledge-base-token",
       resources: 2,

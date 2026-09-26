@@ -67,7 +67,8 @@
         11,
         12,
         13,
-        14
+        14,
+        15
     ],
     "CardNames": {
         "0": "Kyd",
@@ -84,7 +85,8 @@
         "11": "Benc",
         "12": "Hau",
         "13": "Demis",
-        "14": "Chrion"
+        "14": "Chrion",
+        "15": "Ghoti"
     },
     "CardMetadata": {
         "0": "card.planet:discordant-stars/kyd",
@@ -101,7 +103,8 @@
         "11": "card.planet:discordant-stars/benc",
         "12": "card.planet:discordant-stars/hau",
         "13": "card.planet:discordant-stars/demis",
-        "14": "card.planet:discordant-stars/chrion"
+        "14": "card.planet:discordant-stars/chrion",
+        "15": "card.planet:discordant-stars/ghoti"
     },
     "CardTags": {},
     "GroundAccessibility": "ZoomAndContext",

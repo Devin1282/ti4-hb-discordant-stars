@@ -535,4 +535,16 @@ export const systems: Array<SystemSchemaType> = [
                 },
             ],
         },
+        {
+            tile: -2000,
+            isExcludeFromDraft: true,
+            planets: [
+                {
+                name: "Ghoti",
+                nsidName: "ghoti",
+                resources: 3,
+                influence: 3,
+                },
+            ],
+        },
     ];

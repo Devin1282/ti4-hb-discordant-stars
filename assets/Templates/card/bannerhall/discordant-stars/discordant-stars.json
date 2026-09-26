@@ -1,0 +1,73 @@
+{
+    "Type": "Card",
+    "GUID": "20EA7B308244E4B409CCDEC6917C4B2B",
+    "Name": "Bannerhall",
+    "Metadata": "",
+    "CollisionType": "Regular",
+    "Friction": 0.7,
+    "Restitution": 0,
+    "Density": 0.5,
+    "SurfaceType": "Cardboard",
+    "Roughness": 1,
+    "Metallic": 0,
+    "PrimaryColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+    },
+    "SecondaryColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+    },
+    "Flippable": true,
+    "AutoStraighten": false,
+    "ShouldSnap": true,
+    "ScriptName": "",
+    "Blueprint": "",
+    "Models": [],
+    "Collision": [],
+    "SnapPointsGlobal": false,
+    "SnapPoints": [],
+    "ZoomViewDirection": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+    },
+    "FrontTexture": "card/bannerhall/discordant-stars/discordant-stars.face.jpg",
+    "BackTexture": "card/bannerhall/discordant-stars/discordant-stars.back.jpg",
+    "HiddenTexture": "",
+    "BackIndex": -3,
+    "HiddenIndex": -1,
+    "NumHorizontal": 2,
+    "NumVertical": 2,
+    "Width": 4.2,
+    "Height": 6.3,
+    "Thickness": 0.05,
+    "HiddenInHand": true,
+    "UsedWithCardHolders": true,
+    "CanStack": true,
+    "UsePrimaryColorForSide": false,
+    "FrontTextureOverrideExposed": false,
+    "AllowFlippedInStack": false,
+    "MirrorBack": true,
+    "Model": "Rounded",
+    "Indices": [
+        0,
+        1,
+        2
+    ],
+    "CardNames": {
+        "0": "Bannerhall 1",
+        "1": "Bannerhall 2",
+        "2": "Bannerhall 3"
+    },
+    "CardMetadata": {
+        "0": "card.bannerhall:discordant-stars/bannerhall-1",
+        "1": "card.bannerhall:discordant-stars/bannerhall-2",
+        "2": "card.bannerhall:discordant-stars/bannerhall-3"
+    },
+    "CardTags": {},
+    "GroundAccessibility": "ZoomAndContext",
+    "Tags": []
+}

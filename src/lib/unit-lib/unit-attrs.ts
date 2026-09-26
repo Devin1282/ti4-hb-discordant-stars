@@ -65,13 +65,6 @@ export const unitAttrs: Array<UnitAttrsSchemaType> = [
       cost: 6,
     },
     {
-      name: "The Lord", 
-      unit: "flagship",
-      nsidName: "the-lord",
-      spaceCombat: { dice: 2, hit: 7 },
-      cost: 6,
-    },
-    {
       name: "All Mother", 
       unit: "flagship",
       nsidName: "all-mother",
