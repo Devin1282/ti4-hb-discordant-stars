@@ -249,7 +249,7 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["the-lady","combat-transport-1","combat-transport-2"],
       extras: [
         { nsid: "card.lord:discordant-stars/the-lord-card" },
-        { nsid: "token.lord:discordant-stars/the-lord" },
+        { nsid: "token:discordant-stars/the-lord" },
       ],
     },
     {
@@ -864,10 +864,10 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["broker-network"],
       unitOverrides: ["wayfinder"],
       extras: [
-        { nsid: "token.bentor:discordant-stars/cultural-fragment-token" },
-        { nsid: "token.bentor:discordant-stars/industrial-fragment-token" },
-        { nsid: "token.bentor:discordant-stars/hazardous-fragment-token" },
-        { nsid: "token.bentor:discordant-stars/frontier-fragment-token" },
+        { nsid: "token:discordant-stars/cultural-fragment-token" },
+        { nsid: "token:discordant-stars/industrial-fragment-token" },
+        { nsid: "token:discordant-stars/hazardous-fragment-token" },
+        { nsid: "token:discordant-stars/frontier-fragment-token" },
         { nsid: "token.attachment.planet:discordant-stars/encryption-key-token" },
       ],
     },
