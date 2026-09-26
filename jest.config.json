@@ -2,8 +2,8 @@
   "preset": "ts-jest",
   "testEnvironment": "node",
   "setupFilesAfterEnv": [
-    "./src/global/global.ts",
-    "./src/global/jest-setup.ts"
+    "./node_modules/ti4-ttpg-ts/build/global/global.js",
+    "./node_modules/ti4-ttpg-ts/build/global/jest-setup.js"
   ],
   "moduleNameMapper": {
     "^@tabletop-playground/api$": "ttpg-mock"
@@ -14,6 +14,7 @@
     "/.git/",
     "/.vscode/",
     "/.idea/",
-    "/prebuild/"
+    "/prebuild/",
+    "generate.test"
   ]
 }

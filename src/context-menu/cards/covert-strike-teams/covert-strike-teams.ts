@@ -27,14 +27,13 @@ import {
 } from "@tabletop-playground/api";
 
 const NSID_COVERT_STRIKE_TEAMS: string =
-  "card.tech:discordant-stars/covert-strike-teams";
+  "card.technology.yellow:discordant-stars/covert-strike-teams";
 const ACTION_COVERT_STRIKE_TEAMS: string = "*Invoke Covert Stike Teams";
-const TOOLTIP_COVERT_STRIKE_TEAMS: string =
-  "Rolls Ground Combat for 2 Units";
+const TOOLTIP_COVERT_STRIKE_TEAMS: string = "Rolls Ground Combat for 2 Units";
 
 /**
- * "At the start of a ground combat, you may roll 1 die for each of up to 2 of your ground forces on that planet. 
- * For each result equal to or greater than that unit's combat value, produce 1 hit; 
+ * "At the start of a ground combat, you may roll 1 die for each of up to 2 of your ground forces on that planet.
+ * For each result equal to or greater than that unit's combat value, produce 1 hit;
  * your opponent must assign it to 1 of their units on that planet."
  */
 export class RightClickCovertStrikeTeams
@@ -51,7 +50,11 @@ export class RightClickCovertStrikeTeams
         this._doCovertStrikeTeams(object, player.getSlot());
       }
     };
-    super(NSID_COVERT_STRIKE_TEAMS, ACTION_COVERT_STRIKE_TEAMS, customActionHandler);
+    super(
+      NSID_COVERT_STRIKE_TEAMS,
+      ACTION_COVERT_STRIKE_TEAMS,
+      customActionHandler,
+    );
     this.setTooltip(ACTION_COVERT_STRIKE_TEAMS, TOOLTIP_COVERT_STRIKE_TEAMS);
   }
 
@@ -103,7 +106,7 @@ export class RightClickCovertStrikeTeams
     const mechRolls: number = Math.min(mechCount, 2);
     const infantryRolls: number = Math.min(infantryCount, 2 - mechRolls);
 
-    if(mechRolls < 1 && infantryRolls < 1) {
+    if (mechRolls < 1 && infantryRolls < 1) {
       throw new Error(
         `Covert Strike Team: No ground forces found in system ${activeSystemHex}`,
       );
@@ -114,7 +117,7 @@ export class RightClickCovertStrikeTeams
     const infantryUnitAttrs: UnitAttrs | undefined =
       combatRoll.self.unitAttrsSet.get("infantry");
     const plastics: Array<UnitPlastic> = UnitPlastic.getAll();
-      UnitPlastic.assignPlanets(plastics);
+    UnitPlastic.assignPlanets(plastics);
 
     const perPlanetResults: Array<string> = planetNames.map(
       (planetName: string): string => {
@@ -140,7 +143,10 @@ export class RightClickCovertStrikeTeams
                     diceResults.push(`${diceResult}`);
                   }
                 }
-              } else if (plastic.getUnit() === "infantry" && infantryUnitAttrs) {
+              } else if (
+                plastic.getUnit() === "infantry" &&
+                infantryUnitAttrs
+              ) {
                 const infantryCombatAttrs: CombatAttrs | undefined =
                   infantryUnitAttrs.getGroundCombat();
                 if (infantryCombatAttrs) {
@@ -177,10 +183,7 @@ export class RightClickCovertStrikeTeams
     );
   }
 
-  _getLocalPlanetNames(
-    playerSlot: number,
-    systemHex: HexType,
-  ): Array<string> {
+  _getLocalPlanetNames(playerSlot: number, systemHex: HexType): Array<string> {
     const faction: Faction | undefined =
       TI4.factionRegistry.getByPlayerSlot(playerSlot);
 

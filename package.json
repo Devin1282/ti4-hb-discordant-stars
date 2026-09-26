@@ -22,16 +22,16 @@
     "@typescript-eslint/parser": "^8.70.0",
     "eslint": "^10.10.0",
     "jest": "^30.5.1",
-    "ti4-hb-helper": "^1.1.25",
+    "ti4-hb-helper": "^1.1.28",
     "ts-jest": "^29.4.12",
     "ttpg-scripts": "^1.5.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "ti4-ttpg-ts": "^1.0.22",
+    "ti4-ttpg-ts": "^1.0.24",
     "ttpg-darrell": "^1.1.78"
   },
   "resolutions": {
-    "ti4-ttpg-ts": "^1.0.22"
+    "ti4-ttpg-ts": "^1.0.24"
   }
 }
