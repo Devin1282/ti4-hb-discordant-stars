@@ -1925,9 +1925,9 @@ ansi-regex@^5.0.1:
   integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
 
 ansi-regex@^6.2.2:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.3.0.tgz#247c8e7b70a1a43b10ce14c0226fcbf58e8815d5"
-  integrity sha512-WpDfL7NO6j7tH88IDBNVdUJxDh9nmCteAVW9dsep846XdwF4naCBK+/tGLX3KJgcpgMRXCFlTM2hKGoK9FsdrQ==
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.4.0.tgz#69093d6436d30dbb9b04fe7bdcbcfe16c697d8a1"
+  integrity sha512-KzTVk2tCWAHtYrvvvaP8bJKJq2pVinhLcGEQdtLIYPbmNGNyYe8QwNaTUYQp2J7/vIsUKt5QCqAfUkYyG9DkOw==
 
 ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   version "4.3.0"
@@ -4466,9 +4466,9 @@ three@^0.158.0:
   integrity sha512-TALj4EOpdDPF1henk2Q+s17K61uEAAWQ7TJB68nr7FKxqwyDr3msOt5IWdbGm4TaWKjrtWS8DJJWe9JnvsWOhQ==
 
 ti4-hb-helper@^1.1.28:
-  version "1.1.28"
-  resolved "https://registry.yarnpkg.com/ti4-hb-helper/-/ti4-hb-helper-1.1.28.tgz#294cb5a3a24abe8635df1c12e14e8b5d0b79b4a0"
-  integrity sha512-xTr+OZtH/QXxkWsZ8Iq72C7KyofX0+KHV1WDw29Oalx1DKHEz6QN7RWZT33aJv/ri3t0AxoA/IfmLIU8dihESA==
+  version "1.1.29"
+  resolved "https://registry.yarnpkg.com/ti4-hb-helper/-/ti4-hb-helper-1.1.29.tgz#58553bdd3ed218d7acde94a063c27ae307cfa9e6"
+  integrity sha512-rcuFBLmUPGNp0oneNQ3QczqLs/rdmU4EiKyVwvp/ZD/UhZ30Tr9JmommipdOTPPjYwwTCVFVZHyHtx8B8OqfpA==
   dependencies:
     "@tabletop-playground/api" "^0.41.0"
     "@types/jest" "^30.0.0"

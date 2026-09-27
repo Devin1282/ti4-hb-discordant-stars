@@ -53,6 +53,7 @@ it("generate", async () => {
 
   abstractGen = new GenExtDeck(homebrew)
     .setDeckType("legendary-planet")
+    .setIsLandscape(true)
     .setIsSharedBack(false);
   await abstractGen.generate(errors);
   await abstractGen.writeOutputFiles();

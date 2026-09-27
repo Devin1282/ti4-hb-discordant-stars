@@ -24,7 +24,7 @@ import {
 export class RightClickSingularityCradle extends AbstractRightClickCard {
   constructor() {
     const cardNsidPrefix: string = "card.leader.hero:discordant-stars/singularity-cradle";
-    const customActionName: string = "*Dimensional Anchor";
+    const customActionName: string = "*Singularity Cradle";
     const customActionHandler = (
       object: GameObject,
       player: Player,

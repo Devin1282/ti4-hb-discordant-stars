@@ -145,7 +145,7 @@ export class RightClickCovertStrikeTeams
           if (planetName === planetOfPlastic?.getName()) {
             if (diceCount < 2) {
               //favor mechs
-              if (plastic.getUnit() === "mech" && mechUnitAttrs) {
+              if (plastic.getUnit() === "mech" && mechUnitAttrs && plastic.getOwningPlayerSlot() === cardOwnerSlot) {
                 const mechCombatAttrs: CombatAttrs | undefined =
                   mechUnitAttrs.getGroundCombat();
                 if (mechCombatAttrs) {
@@ -161,7 +161,7 @@ export class RightClickCovertStrikeTeams
                 }
               } else if (
                 plastic.getUnit() === "infantry" &&
-                infantryUnitAttrs
+                infantryUnitAttrs && plastic.getOwningPlayerSlot() === cardOwnerSlot
               ) {
                 const infantryCombatAttrs: CombatAttrs | undefined =
                   infantryUnitAttrs.getGroundCombat();
