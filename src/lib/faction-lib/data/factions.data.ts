@@ -404,6 +404,7 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["splintering-gale", "shattered-sky-1", "shattered-sky-2"],
       extras: [
         { nsid: "card.grove:discordant-stars/0" },
+        { nsid: "token.attachment.planet:discordant-stars/garden-world-token", count: 10 },
       ],
     },
     {
@@ -572,6 +573,8 @@ export const factions: Array<FactionSchemaType> = [
       extras: [
         { nsid: "card.policy:discordant-stars/0" },
         { nsid: "card.olradin:discordant-stars/0" },
+        { nsid: "token.attachment.planet:discordant-stars/exemplar-bonum-token", count: 4 },
+        { nsid: "token.attachment.planet:discordant-stars/exemplar-malus-token", count: 4 },
       ],
     },
     {
@@ -594,7 +597,7 @@ export const factions: Array<FactionSchemaType> = [
         mechs: ["templar"],
       },
       promissories: ["favor-of-rhodun"],
-      startingTechs: ["bio-stims"],
+      startingTechs: ["biostims"],
       startingUnits: {
         carrier: 1,
         cruiser: 1,
@@ -1081,7 +1084,7 @@ export const factions: Array<FactionSchemaType> = [
         mechs: ["pustule"],
       },
       promissories: ["kyro-rider"],
-      startingTechs: ["daxcive-animators","bio-stims"],
+      startingTechs: ["dacxive-animators","biostims"],
       startingUnits: {
         carrier: 1,
         dreadnought: 1,

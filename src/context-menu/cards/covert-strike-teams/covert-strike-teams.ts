@@ -26,6 +26,12 @@ import {
   world,
 } from "@tabletop-playground/api";
 
+let lastActivatedSystem: System | undefined = undefined;
+
+TI4.events.onSystemActivated.add((system: System, player: Player): void => {
+  lastActivatedSystem = system;
+});
+
 const NSID_COVERT_STRIKE_TEAMS: string =
   "card.technology.yellow:discordant-stars/covert-strike-teams";
 const ACTION_COVERT_STRIKE_TEAMS: string = "*Invoke Covert Stike Teams";
@@ -74,8 +80,7 @@ export class RightClickCovertStrikeTeams
     const cardOwnerSlot: number = find.closestOwnedCardHolderOwner(cardPos);
     const color: Color = world.getSlotColor(cardOwnerSlot);
 
-    const activeSystem: System | undefined =
-      OnSystemActivated.getLastActivatedSystem();
+    const activeSystem: System | undefined = lastActivatedSystem;
     if (!activeSystem) {
       Broadcast.chatAll(
         `${clickingPlayerName} invokes Covert Stike Teams, no active system`,
@@ -117,6 +122,17 @@ export class RightClickCovertStrikeTeams
     const infantryUnitAttrs: UnitAttrs | undefined =
       combatRoll.self.unitAttrsSet.get("infantry");
     const plastics: Array<UnitPlastic> = UnitPlastic.getAll();
+
+    const unitPriority: Record<string, number> = {
+      mech: 0,
+      infantry: 1,
+    };
+    plastics.sort((a, b) => {
+      const priorityA = unitPriority[a.getUnit()] ?? 2;
+      const priorityB = unitPriority[b.getUnit()] ?? 2;
+      return priorityA - priorityB;
+    });
+
     UnitPlastic.assignPlanets(plastics);
 
     const perPlanetResults: Array<string> = planetNames.map(

@@ -76,4 +76,19 @@ export const planetAttachments: Array<PlanetAttachmentSchemaType> = [
       nsidName: "encryption-key-token",
       techs: ["blue","green","red","yellow"],
     },
+    {
+      name: "Garden World Token",
+      nsidName: "garden-world-token",
+      resources: 1,
+    },
+    {
+      name: "Exemplar Bonum Token",
+      nsidName: "exemplar-bonum-token",
+      influence: 1,
+    },
+    {
+      name: "Exemplar Malus Token",
+      nsidName: "exemplar-malus-token",
+      resources: 1,
+    },
 ];
