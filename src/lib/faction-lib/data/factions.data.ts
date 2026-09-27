@@ -989,7 +989,7 @@ export const factions: Array<FactionSchemaType> = [
       unitOverrides: ["beg-bersha", "orion-platform-1", "orion-platform-2"],
       extras: [
         { nsid: "token.attachment.planet:discordant-stars/gledge-base-token" },
-        { nsid: "token.gledge.core:discordant-stars/core-token", count: 3 },
+        { nsid: "token.attachment.planet:discordant-stars/core-token", count: 3 },
         { nsid: "token.gledge.commodity:discordant-stars/gledge-commodity-token", count: 3 },
         { nsid: "card.dhonraz:discordant-stars/0" },
       ],

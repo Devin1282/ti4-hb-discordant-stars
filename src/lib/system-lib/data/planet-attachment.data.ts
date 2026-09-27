@@ -34,12 +34,17 @@ export const planetAttachments: Array<PlanetAttachmentSchemaType> = [
     {
       name: "Heart of Rebellion",
       nsidName: "heart-of-rebellion-token",
-      doNotAttach: true,
     },
     {
       name: "GLEdge Base",
       nsidName: "gledge-base-token",
       resources: 2,
+    },
+    {
+      name: "Core Token",
+      nsidName: "core-token",
+      overrideBaseInfluence: 0,
+      overrideBaseResources: 2,
     },
     {
       name: "Automatons",

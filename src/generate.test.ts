@@ -126,12 +126,6 @@ it("generate", async () => {
   await abstractGen.writeOutputFiles();
 
   abstractGen = new GenExtPngToken(homebrew)
-    .setToken("core-token")
-    .setTokenExtraPath("gledge/core")
-  await abstractGen.generate(errors);
-  await abstractGen.writeOutputFiles();
-
-  abstractGen = new GenExtPngToken(homebrew)
     .setToken("myko-commodity-token")
     .setTokenExtraPath("myko")
   await abstractGen.generate(errors);
