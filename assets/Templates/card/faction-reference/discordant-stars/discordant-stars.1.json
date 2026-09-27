@@ -1,0 +1,82 @@
+{
+    "Type": "Card",
+    "GUID": "84AA70B70CC91C721EEC8F56FAA6E5B2",
+    "Name": "Faction Reference 2/2",
+    "Metadata": "",
+    "CollisionType": "Regular",
+    "Friction": 0.7,
+    "Restitution": 0,
+    "Density": 0.5,
+    "SurfaceType": "Cardboard",
+    "Roughness": 1,
+    "Metallic": 0,
+    "PrimaryColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+    },
+    "SecondaryColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+    },
+    "Flippable": true,
+    "AutoStraighten": false,
+    "ShouldSnap": true,
+    "ScriptName": "",
+    "Blueprint": "",
+    "Models": [],
+    "Collision": [],
+    "SnapPointsGlobal": false,
+    "SnapPoints": [],
+    "ZoomViewDirection": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+    },
+    "FrontTexture": "card/faction-reference/discordant-stars/discordant-stars.face.1.jpg",
+    "BackTexture": "card/faction-reference/discordant-stars/discordant-stars.back.jpg",
+    "HiddenTexture": "",
+    "BackIndex": -2,
+    "HiddenIndex": -1,
+    "NumHorizontal": 1,
+    "NumVertical": 6,
+    "Width": 8.8,
+    "Height": 5.1,
+    "Thickness": 0.05,
+    "HiddenInHand": true,
+    "UsedWithCardHolders": true,
+    "CanStack": true,
+    "UsePrimaryColorForSide": false,
+    "FrontTextureOverrideExposed": false,
+    "AllowFlippedInStack": false,
+    "MirrorBack": true,
+    "Model": "Rounded",
+    "Indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "CardNames": {
+        "0": "GLEdge Union",
+        "1": "Berserkers of Kjalengard",
+        "2": "Monks of Kolume",
+        "3": "Kyro Sodality",
+        "4": "Lanefir Remnants",
+        "5": "Nokar Sellships"
+    },
+    "CardMetadata": {
+        "0": "card.faction-reference:discordant-stars/gledge-union",
+        "1": "card.faction-reference:discordant-stars/berserkers-of-kjalengard",
+        "2": "card.faction-reference:discordant-stars/monks-of-kolume",
+        "3": "card.faction-reference:discordant-stars/kyro-sodality",
+        "4": "card.faction-reference:discordant-stars/lanefir-remnants",
+        "5": "card.faction-reference:discordant-stars/nokar-sellships"
+    },
+    "CardTags": {},
+    "GroundAccessibility": "ZoomAndContext",
+    "Tags": []
+}

@@ -1,0 +1,202 @@
+/**
+ * Utility functions to simplify unit modifier tests.
+ * Use the ".test.ts" naming to prevent including in the mod build.
+ */
+import { GameObject, Vector } from "@tabletop-playground/api";
+import { MockCard, MockCardHolder, MockGameObject } from "ttpg-mock";
+import { Find } from "ttpg-darrell";
+
+import { UnitModifierActiveIdle } from "ti4-ttpg-ts";
+import { UnitType } from "ti4-ttpg-ts";
+
+export const SELF: number = 1;
+export const OPPONENT: number = 2;
+
+export const SELF_POS = new Vector(100, 0, 0);
+export const OPPONENT_POS = new Vector(-100, 0, 0);
+export const ANY_POS = new Vector(200, 0, 0);
+
+export function placeGameObjects(params: {
+  systemNsid?: string; // default is tile 1
+  systemNsidAdj?: string; // default is tile 2
+  self?: Array<string>;
+  selfActive?: Array<string>;
+  selfUnits?: Map<UnitType, number>;
+  selfUnitsOffPlanet?: Map<UnitType, number>; // in hex, not over planet
+  selfUnitsAdj?: Map<UnitType, number>;
+  opponent?: Array<string>;
+  opponentUnits?: Map<UnitType, number>;
+  opponentUnitsOffPlanet?: Map<UnitType, number>;
+  opponentUnitsAdj?: Map<UnitType, number>;
+  any?: Array<string>; // for "any" unit modifier cards
+}) {
+  // Map positions.
+  const hexPos: Vector = TI4.hex.toPosition("<0,0,0>");
+  const adjHexPos: Vector = TI4.hex.toPosition("<1,0,-1>");
+  const hexPosOffPlanet: Vector = Vector.lerp(hexPos, adjHexPos, 0.45);
+
+  // Create tile (at origin) and adjacent tile (2).
+  const systemNsid: string = params.systemNsid ?? "tile.system:base/1";
+  MockGameObject.simple(systemNsid);
+  const systemNsidAdj: string = params.systemNsidAdj ?? "tile.system:base/2";
+  MockGameObject.simple(systemNsidAdj, { position: adjHexPos });
+
+  // Upgrades and modifiers get assigned to the closest card holder owner.
+  new MockCardHolder({
+    owningPlayerSlot: SELF,
+    position: SELF_POS,
+  });
+  new MockCardHolder({
+    owningPlayerSlot: OPPONENT,
+    position: OPPONENT_POS,
+  });
+
+  // Create nsid objects.
+  for (const nsid of params.self ?? []) {
+    if (nsid.startsWith("card.")) {
+      MockCard.simple(nsid, { position: SELF_POS });
+    } else {
+      MockGameObject.simple(nsid, { position: SELF_POS });
+    }
+  }
+  for (const nsid of params.selfActive ?? []) {
+    let obj: GameObject;
+    if (nsid.startsWith("card.")) {
+      obj = MockCard.simple(nsid, { position: SELF_POS });
+    } else {
+      obj = MockGameObject.simple(nsid, { position: SELF_POS });
+    }
+    UnitModifierActiveIdle.setActive(obj, true);
+  }
+  for (const nsid of params.opponent ?? []) {
+    if (nsid.startsWith("card.")) {
+      MockCard.simple(nsid, { position: OPPONENT_POS });
+    } else {
+      MockGameObject.simple(nsid, { position: OPPONENT_POS });
+    }
+  }
+  for (const nsid of params.any ?? []) {
+    if (nsid.startsWith("card.")) {
+      MockCard.simple(nsid, { position: ANY_POS });
+    } else {
+      MockGameObject.simple(nsid, { position: ANY_POS });
+    }
+  }
+
+  // Create unit objects.
+  for (const [unit, count] of params.selfUnits ?? []) {
+    const source: string = unit === "mech" ? "pok" : "base";
+    for (let i = 0; i < count; i++) {
+      MockGameObject.simple(`unit:${source}/${unit}`, {
+        owningPlayerSlot: SELF,
+        position: hexPos,
+      });
+    }
+  }
+  for (const [unit, count] of params.selfUnitsOffPlanet ?? []) {
+    const source: string = unit === "mech" ? "pok" : "base";
+    for (let i = 0; i < count; i++) {
+      MockGameObject.simple(`unit:${source}/${unit}`, {
+        owningPlayerSlot: SELF,
+        position: hexPosOffPlanet,
+      });
+    }
+  }
+  for (const [unit, count] of params.opponentUnits ?? []) {
+    const source: string = unit === "mech" ? "pok" : "base";
+    for (let i = 0; i < count; i++) {
+      MockGameObject.simple(`unit:${source}/${unit}`, {
+        owningPlayerSlot: OPPONENT,
+        position: hexPos,
+      });
+    }
+  }
+  for (const [unit, count] of params.opponentUnitsOffPlanet ?? []) {
+    const source: string = unit === "mech" ? "pok" : "base";
+    for (let i = 0; i < count; i++) {
+      MockGameObject.simple(`unit:${source}/${unit}`, {
+        owningPlayerSlot: OPPONENT,
+        position: hexPosOffPlanet,
+      });
+    }
+  }
+  for (const [unit, count] of params.selfUnitsAdj ?? []) {
+    const source: string = unit === "mech" ? "pok" : "base";
+    for (let i = 0; i < count; i++) {
+      MockGameObject.simple(`unit:${source}/${unit}`, {
+        owningPlayerSlot: SELF,
+        position: adjHexPos,
+      });
+    }
+  }
+  for (const [unit, count] of params.opponentUnitsAdj ?? []) {
+    const source: string = unit === "mech" ? "pok" : "base";
+    for (let i = 0; i < count; i++) {
+      MockGameObject.simple(`unit:${source}/${unit}`, {
+        owningPlayerSlot: OPPONENT,
+        position: adjHexPos,
+      });
+    }
+  }
+}
+
+it("placeGameObjects (empty)", () => {
+  placeGameObjects({});
+});
+
+it("placeGameObjects (all)", () => {
+  placeGameObjects({
+    systemNsid: "tile.system:base/3",
+    self: ["card.action:base/direct-hit"],
+    selfUnits: new Map([
+      ["carrier", 1],
+      ["fighter", 1],
+    ]),
+    selfUnitsOffPlanet: new Map([["mech", 1]]),
+    selfUnitsAdj: new Map([["destroyer", 1]]),
+    opponent: ["card.action:base/sabotage"],
+    opponentUnits: new Map([["dreadnought", 1]]),
+    opponentUnitsOffPlanet: new Map([["infantry", 1]]),
+    opponentUnitsAdj: new Map([["cruiser", 1]]),
+  });
+
+  const find = new Find();
+  let obj: GameObject | undefined;
+
+  obj = find.findGameObject("tile.system:base/3");
+  expect(obj?.getPosition().toString()).toEqual("(X=0,Y=0,Z=0)");
+
+  obj = find.findGameObject("card.action:base/direct-hit");
+  expect(obj?.getPosition().toString()).toEqual("(X=100,Y=0,Z=0)");
+
+  obj = find.findGameObject("unit:base/carrier");
+  expect(obj?.getPosition().toString()).toEqual("(X=0,Y=0,Z=0)");
+  expect(obj?.getOwningPlayerSlot()).toEqual(SELF);
+
+  obj = find.findGameObject("unit:base/fighter");
+  expect(obj?.getPosition().toString()).toEqual("(X=0,Y=0,Z=0)");
+  expect(obj?.getOwningPlayerSlot()).toEqual(SELF);
+
+  obj = find.findGameObject("unit:pok/mech");
+  expect(obj?.getPosition().toString()).toEqual("(X=6.754,Y=0,Z=0)");
+  expect(obj?.getOwningPlayerSlot()).toEqual(SELF);
+
+  obj = find.findGameObject("unit:base/destroyer");
+  expect(obj?.getPosition().toString()).toEqual("(X=15.01,Y=0,Z=0)");
+  expect(obj?.getOwningPlayerSlot()).toEqual(SELF);
+
+  obj = find.findGameObject("card.action:base/sabotage");
+  expect(obj?.getPosition().toString()).toEqual("(X=-100,Y=0,Z=0)");
+
+  obj = find.findGameObject("unit:base/dreadnought");
+  expect(obj?.getPosition().toString()).toEqual("(X=0,Y=0,Z=0)");
+  expect(obj?.getOwningPlayerSlot()).toEqual(OPPONENT);
+
+  obj = find.findGameObject("unit:base/infantry");
+  expect(obj?.getPosition().toString()).toEqual("(X=6.754,Y=0,Z=0)");
+  expect(obj?.getOwningPlayerSlot()).toEqual(OPPONENT);
+
+  obj = find.findGameObject("unit:base/cruiser");
+  expect(obj?.getPosition().toString()).toEqual("(X=15.01,Y=0,Z=0)");
+  expect(obj?.getOwningPlayerSlot()).toEqual(OPPONENT);
+});

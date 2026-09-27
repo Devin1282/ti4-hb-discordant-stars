@@ -1,7 +1,6 @@
 import { TechSchemaType } from "ti4-ttpg-ts";
 
-export const SOURCE_TO_TECH_DATA: Record<string, Array<TechSchemaType>> = {
-    "discordant-stars": [
+export const technologies: Array<TechSchemaType> = [
     {
         name: "Aegis II",
         nsidName: "aegis-2",
@@ -12,7 +11,7 @@ export const SOURCE_TO_TECH_DATA: Record<string, Array<TechSchemaType>> = {
     },
     {
         name: "Blockade Runner II",
-        nsidName: "bloackade-runner-2",
+        nsidName: "blockade-runner-2",
         color: "unit-upgrade",
         prerequisites: { red: 2 },
         isFactionTech: true,
@@ -25,6 +24,7 @@ export const SOURCE_TO_TECH_DATA: Record<string, Array<TechSchemaType>> = {
         prerequisites: { blue: 2, yellow: 1 },
         isFactionTech: true,
         replacesNsidName: "dreadnought-2",
+        
     },
     {
         name: "Combat Transport II",
@@ -148,10 +148,11 @@ export const SOURCE_TO_TECH_DATA: Record<string, Array<TechSchemaType>> = {
     },
     {
         name: "Voidflare Warden II",
-        nsidName: "void-flare-warden-2",
+        nsidName: "voidflare-warden-2",
         color: "unit-upgrade",
         prerequisites: { green: 1, yellow: 1, red: 1 },
         isFactionTech: true,
+        replacesNsidName: "mech"
     },
     {
       nsidName: "geosympathic-impeller",
@@ -354,8 +355,8 @@ export const SOURCE_TO_TECH_DATA: Record<string, Array<TechSchemaType>> = {
       isFactionTech: true,
     },
     {
-      nsidName: "false-flag-operation",
-      name: "False Flag Operation",
+      nsidName: "false-flag-operations",
+      name: "False Flag Operations",
       color: "red",
       prerequisites: { red: 1 },
       abbr: "FFO",
@@ -545,5 +546,4 @@ export const SOURCE_TO_TECH_DATA: Record<string, Array<TechSchemaType>> = {
       abbr: "Void Missiles",
       isFactionTech: true,
     },
-  ],
-};
+  ];
