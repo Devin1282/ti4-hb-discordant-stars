@@ -842,13 +842,14 @@ export const factions: Array<FactionSchemaType> = [
         spaceDock: 1,
         pds: 1,
       },
-      factionTechs: ["broker-network"],
+      factionTechs: ["broker-network", "merged-replicators"],
       unitOverrides: ["wayfinder"],
       extras: [
         { nsid: "token:discordant-stars/cultural-fragment-token" },
         { nsid: "token:discordant-stars/industrial-fragment-token" },
         { nsid: "token:discordant-stars/hazardous-fragment-token" },
         { nsid: "token:discordant-stars/frontier-fragment-token" },
+        { nsid: "token:discordant-stars/bentor-commodity-token" },
         { nsid: "token.attachment.planet:discordant-stars/encryption-key-token" },
       ],
     },
@@ -954,7 +955,6 @@ export const factions: Array<FactionSchemaType> = [
       factionTechs: ["networked-command","parallel-production"],
       unitOverrides: ["all-mother"],
       extras: [
-        { nsid: "card.planet:discordant-stars/0" },
         { nsid: "card.legendary-planet:discordant-stars/0" },
       ],
     },

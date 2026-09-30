@@ -40,7 +40,7 @@
     "BackIndex": -3,
     "HiddenIndex": -1,
     "NumHorizontal": 1,
-    "NumVertical": 1,
+    "NumVertical": 2,
     "Width": 6.3,
     "Height": 4.2,
     "Thickness": 0.05,
@@ -53,13 +53,16 @@
     "MirrorBack": true,
     "Model": "Rounded",
     "Indices": [
-        0
+        0,
+        1
     ],
     "CardNames": {
-        "0": "Ghoti"
+        "0": "Ghoti Ability",
+        "1": "Ghoti"
     },
     "CardMetadata": {
-        "0": "card.legendary-planet:discordant-stars/ghoti"
+        "0": "card.legendary-planet:discordant-stars/ghoti-ability",
+        "1": "card.legendary-planet:discordant-stars/ghoti"
     },
     "CardTags": {},
     "GroundAccessibility": "ZoomAndContext",

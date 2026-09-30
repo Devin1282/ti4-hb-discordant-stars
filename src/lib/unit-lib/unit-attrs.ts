@@ -410,7 +410,7 @@ export const unitAttrs: Array<UnitAttrsSchemaType> = [
       name: "Gauss Cannon II",
       unit: "pds",
       nsidName: "gauss-cannon-2",
-      spaceCannon: { hit: 4, range: 1 },
+      spaceCannon: { hit: 4 },
       bombardment: { hit: 4 },
     },
 
