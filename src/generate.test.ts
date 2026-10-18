@@ -132,7 +132,7 @@ it("generate", async () => {
   await abstractGen.generate(errors);
   await abstractGen.writeOutputFiles();
 
-    abstractGen = new GenExtPngToken(homebrew)
+  abstractGen = new GenExtPngToken(homebrew)
     .setTokenExtraPath("rohdhna")
     .setToken("rohdhna-commodity-token")
     .setWidth(2);

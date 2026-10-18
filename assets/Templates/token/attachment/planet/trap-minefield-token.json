@@ -1,7 +1,7 @@
 {
   "Type": "Generic",
   "GUID": "37FADBC57E824FDE5443B4132FB38BC9",
-  "Name": "Trap: Minefield",
+  "Name": "Trap",
   "Metadata": "token.attachment.planet:discordant-stars/trap-minefield-token",
   "CollisionType": "Regular",
   "Friction": 0.7,
@@ -68,7 +68,7 @@
         "Y": 0,
         "Z": 0
       },
-      "Texture": "token/attachment/planet/trap-minefield-token.png",
+      "Texture": "token/attachment/planet/trap-minefield-token.back.png",
       "NormalMap": "",
       "ExtraMap": "",
       "IsTransparent": false,

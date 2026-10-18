@@ -1,7 +1,7 @@
 {
   "Type": "Generic",
   "GUID": "C8D3B4AC9ACD7D3CCA39D725F47D5944",
-  "Name": "Trap: Interference Grid",
+  "Name": "Trap",
   "Metadata": "token.attachment.planet:discordant-stars/trap-interference-grid-token",
   "CollisionType": "Regular",
   "Friction": 0.7,
@@ -68,7 +68,7 @@
         "Y": 0,
         "Z": 0
       },
-      "Texture": "token/attachment/planet/trap-interference-grid-token.png",
+      "Texture": "token/attachment/planet/trap-interference-grid-token.back.png",
       "NormalMap": "",
       "ExtraMap": "",
       "IsTransparent": false,

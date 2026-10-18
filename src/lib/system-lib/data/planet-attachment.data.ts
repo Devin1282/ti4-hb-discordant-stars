@@ -2,34 +2,40 @@ import { PlanetAttachmentSchemaType } from "ti4-ttpg-ts";
 
 export const planetAttachments: Array<PlanetAttachmentSchemaType> = [
     {
-      name: "Trap: Account Siphon",
+      name: "Trap",
       nsidName: "trap-account-siphon-token",
       doNotAttach: true,
+      imgFaceDown: true,
     },
     {
-      name: "Trap: Feint",
+      name: "Trap",
       nsidName: "trap-feint-token",
       doNotAttach: true,
+      imgFaceDown: true,
     },
     {
-      name: "Trap: Gravitic Inhibitors",
+      name: "Trap",
       nsidName: "trap-gravitic-inhibitors-token",
       doNotAttach: true,
+      imgFaceDown: true,
     },
     {
-      name: "Trap: Interference Grid",
+      name: "Trap",
       nsidName: "trap-interference-grid-token",
       doNotAttach: true,
+      imgFaceDown: true,
     },
     {
-      name: "Trap: Minefield",
+      name: "Trap",
       nsidName: "trap-minefield-token",
       doNotAttach: true,
+      imgFaceDown: true,
     },
     {
-      name: "Trap: Saboteurs",
+      name: "Trap",
       nsidName: "trap-saboteurs-token",
       doNotAttach: true,
+      imgFaceDown: true,
     },
     {
       name: "Heart of Rebellion",

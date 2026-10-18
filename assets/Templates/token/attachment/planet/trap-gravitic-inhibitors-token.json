@@ -1,7 +1,7 @@
 {
   "Type": "Generic",
   "GUID": "877B5D0FF89F2D6A1904ACA9D41D8021",
-  "Name": "Trap: Gravitic Inhibitors",
+  "Name": "Trap",
   "Metadata": "token.attachment.planet:discordant-stars/trap-gravitic-inhibitors-token",
   "CollisionType": "Regular",
   "Friction": 0.7,
@@ -68,7 +68,7 @@
         "Y": 0,
         "Z": 0
       },
-      "Texture": "token/attachment/planet/trap-gravitic-inhibitors-token.png",
+      "Texture": "token/attachment/planet/trap-gravitic-inhibitors-token.back.png",
       "NormalMap": "",
       "ExtraMap": "",
       "IsTransparent": false,

@@ -1,7 +1,7 @@
 {
   "Type": "Generic",
   "GUID": "0CB0AD1A7ED71F8893DA137EB017E8A9",
-  "Name": "Trap: Feint",
+  "Name": "Trap",
   "Metadata": "token.attachment.planet:discordant-stars/trap-feint-token",
   "CollisionType": "Regular",
   "Friction": 0.7,
@@ -68,7 +68,7 @@
         "Y": 0,
         "Z": 0
       },
-      "Texture": "token/attachment/planet/trap-feint-token.png",
+      "Texture": "token/attachment/planet/trap-feint-token.back.png",
       "NormalMap": "",
       "ExtraMap": "",
       "IsTransparent": false,
